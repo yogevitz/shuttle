@@ -33,6 +33,7 @@ class App extends React.Component {
         {this.state.TemplateIntro &&
           React.createElement(this.state.TemplateIntro)}
         {/* --> */}
+        {console.log('yogev')}
       </div>
     );
   }
