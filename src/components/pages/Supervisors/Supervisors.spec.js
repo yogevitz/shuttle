@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { I18nextProvider } from 'react-i18next';
 import Supervisors from './Supervisors';
-import i18n from '../__mocks__/i18n';
+import i18n from '../../__mocks__/i18n';
 
 describe('Supervisors', () => {
   it('renders a title correctly', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { I18nextProvider } from 'react-i18next';
 import Settings from './Settings';
-import i18n from '../__mocks__/i18n';
+import i18n from '../../__mocks__/i18n';
 
 describe('Riders', () => {
   it('renders a title correctly', () => {

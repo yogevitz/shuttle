@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 import s from './App.scss';
 import { Page, Card, Box, Container, Row, Tabs, Col } from 'wix-style-react';
-import Shuttles from '../Shuttles';
-import WarRoom from '../WarRoom';
-import Supervisors from '../Supervisors';
-import Riders from '../Riders';
-import Statistics from '../Statistics';
-import Settings from '../Settings';
+import Shuttles from '../pages/Shuttles';
+import WarRoom from '../pages/WarRoom';
+import Supervisors from '../pages/Supervisors';
+import Riders from '../pages/Riders';
+import Statistics from '../pages/Statistics';
+import Settings from '../pages/Settings';
 
 const tabs = [
   { id: 1, title: 'War Room', component: <WarRoom /> },
