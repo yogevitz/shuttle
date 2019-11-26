@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 import s from './Supervisors.scss';
 import { Page, Card, Box, Container, Row, Tabs, Col } from 'wix-style-react';
+import SupervisorsTable from '../../SupervisorsTable';
 
 class Supervisors extends React.Component {
   static propTypes = {
@@ -24,7 +25,9 @@ class Supervisors extends React.Component {
 
     return (
       <Card>
-        <Card.Content>Supervisors</Card.Content>
+        <Card.Content>
+          <SupervisorsTable />
+        </Card.Content>
       </Card>
     );
   }
