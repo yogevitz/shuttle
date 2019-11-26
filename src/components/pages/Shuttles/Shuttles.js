@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 import s from './Shuttles.scss';
 import { Page, Card, Box, Container, Row, Tabs, Col } from 'wix-style-react';
+import ShuttlesTable from '../../ShuttlesTable';
 
 class Shuttles extends React.Component {
   static propTypes = {
@@ -24,7 +25,9 @@ class Shuttles extends React.Component {
 
     return (
       <Card>
-        <Card.Content>Shuttles</Card.Content>
+        <Card.Content>
+          <ShuttlesTable />
+        </Card.Content>
       </Card>
     );
   }
