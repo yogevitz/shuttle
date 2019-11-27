@@ -41,7 +41,7 @@ class App extends React.Component {
 
     return (
       <div className={s.root}>
-        <Page upgrade height={window.height}>
+        <Page upgrade height={900}>
           <Page.Header title="Shuttle System" />
           <Page.Tail>
             <Tabs
