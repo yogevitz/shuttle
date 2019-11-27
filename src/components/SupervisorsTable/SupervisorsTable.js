@@ -3,9 +3,10 @@ import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 import s from './SupervisorsTable.scss';
 import { Page, Card, Box, Table, Highlighter, TableActionCell, TableToolbar,
-  Search, Dropdown, Checkbox, Breadcrumbs, PopoverMenu, Button,
+  Search, Dropdown, Checkbox, Breadcrumbs, PopoverMenu,
   PopoverMenuItem, Container, Row, Tabs, Col } from 'wix-style-react';
-import { Star, Download, Print, Duplicate } from 'wix-style-react/new-icons';
+import {Star, Download, Print, Duplicate, Add} from 'wix-style-react/new-icons';
+import Button from 'wix-style-react/Button';
 
 class SupervisorsTable extends React.Component {
   constructor(props) {
@@ -186,6 +187,11 @@ class SupervisorsTable extends React.Component {
           </TableToolbar.ItemGroup>
           <TableToolbar.ItemGroup position="end">
             <TableToolbar.Item>{this.renderSearch(false)}</TableToolbar.Item>
+            <TableToolbar.Item layout="button">
+              <Button suffixIcon={<Add />} onClick={() => window.alert(1)}>
+                Add
+              </Button>
+            </TableToolbar.Item>
           </TableToolbar.ItemGroup>
         </TableToolbar>
       </Card>

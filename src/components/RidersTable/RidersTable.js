@@ -2,10 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 import s from './RidersTable.scss';
-import { Page, Card, Box, Table, Highlighter, TableActionCell, TableToolbar,
-  Search, Dropdown, Checkbox, Breadcrumbs, PopoverMenu, Button,
-  PopoverMenuItem, Container, Row, Tabs, Col } from 'wix-style-react';
-import { Star, Download, Print, Duplicate } from 'wix-style-react/new-icons';
+import {
+  Page,
+  Card,
+  Box,
+  Table,
+  Highlighter,
+  TableActionCell,
+  TableToolbar,
+  Search,
+  Dropdown,
+  Checkbox,
+  Breadcrumbs,
+  PopoverMenu,
+  PopoverMenuItem,
+  Container,
+  Row,
+  Tabs,
+  Col,
+} from 'wix-style-react';
+import Button from 'wix-style-react/Button';
+import {
+  Star,
+  Download,
+  Print,
+  Duplicate,
+  Add,
+} from 'wix-style-react/new-icons';
 
 class RidersTable extends React.Component {
   constructor(props) {
@@ -192,6 +215,11 @@ class RidersTable extends React.Component {
           </TableToolbar.ItemGroup>
           <TableToolbar.ItemGroup position="end">
             <TableToolbar.Item>{this.renderSearch(false)}</TableToolbar.Item>
+            <TableToolbar.Item layout="button">
+              <Button suffixIcon={<Add />} onClick={() => window.alert(1)}>
+                Add
+              </Button>
+            </TableToolbar.Item>
           </TableToolbar.ItemGroup>
         </TableToolbar>
       </Card>
