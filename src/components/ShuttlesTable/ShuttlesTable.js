@@ -2,11 +2,40 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { translate } from 'react-i18next';
 import s from './ShuttlesTable.scss';
-import { Page, Card, Box, Table, Highlighter, TableActionCell, TableToolbar,
-  Search, Dropdown, Checkbox, Breadcrumbs, PopoverMenu,
-  PopoverMenuItem, Container, Row, Tabs, Col } from 'wix-style-react';
-import {Star, Download, Print, Duplicate, Add} from 'wix-style-react/new-icons';
+import {
+  Page,
+  Card,
+  Box,
+  Table,
+  Highlighter,
+  TableActionCell,
+  TableToolbar,
+  Search,
+  Dropdown,
+  Checkbox,
+  Breadcrumbs,
+  PopoverMenu,
+  PopoverMenuItem,
+  Container,
+  Row,
+  Tabs,
+  Col,
+} from 'wix-style-react';
+import {
+  Star,
+  Download,
+  Print,
+  Duplicate,
+  Add,
+} from 'wix-style-react/new-icons';
 import Button from 'wix-style-react/Button';
+import FormField from 'wix-style-react/FormField';
+import Input from 'wix-style-react/Input';
+import Modal from 'wix-style-react/Modal';
+import { Layout, Cell } from 'wix-style-react/Layout';
+import InputArea from 'wix-style-react/InputArea';
+import Text from 'wix-style-react/Text';
+import CreateShuttleModal from './CreateShuttleModal';
 
 class ShuttlesTable extends React.Component {
   constructor(props) {
@@ -18,6 +47,7 @@ class ShuttlesTable extends React.Component {
       filterId: 0,
       searchTerm: '',
       inStock: false,
+      addShuttle: false,
     };
   }
 
@@ -188,15 +218,21 @@ class ShuttlesTable extends React.Component {
           <TableToolbar.ItemGroup position="end">
             <TableToolbar.Item>{this.renderSearch(false)}</TableToolbar.Item>
             <TableToolbar.Item layout="button">
-              <Button suffixIcon={<Add />} onClick={() => window.alert(1)}>
-                Add
-              </Button>
+              <CreateShuttleModal />
             </TableToolbar.Item>
           </TableToolbar.ItemGroup>
         </TableToolbar>
       </Card>
     );
   }
+
+  divider = () => {
+    return <div style={{ height: '30px' }} />;
+  };
+
+  field = (label, component) => {
+    return <FormField label={label}>{React.createElement(component)}</FormField>;
+  };
 
   renderSearch(expandable) {
     return (
