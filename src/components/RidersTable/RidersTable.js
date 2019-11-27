@@ -230,70 +230,65 @@ class RidersTable extends React.Component {
   }
 }
 
-const createDataSet = setIndex => [
+const createDataSet = () => [
   {
-    id: `${setIndex}-1`,
-    name: `Yogev Shlomovitz`,
-    ID: '311530018',
-    parentName: 'Tal',
-    parentPhone: '0527406333',
-    parentEmail: 'tal@gmail.com',
+    id: 1,
+    name: 'Benjamin Netanyahu',
+    ID: '204787923',
+    parentName: 'Yoni',
+    parentPhone: '0547806318',
+    parentEmail: 'yoni@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Idan Shani`,
-    ID: '305235517',
-    parentName: 'Yosi',
-    parentPhone: '0543876221',
-    parentEmail: 'yosi@gmail.com',
+    id: 2,
+    name: 'Benny Gantz',
+    ID: '319835517',
+    parentName: 'Emanuel',
+    parentPhone: '0543989254',
+    parentEmail: 'emanuel@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Tomer Gabay`,
-    ID: '316387262',
-    parentName: 'Rachel',
+    id: 3,
+    name: 'Josh Elgrably',
+    ID: '315483923',
+    parentName: 'Claudia',
     parentPhone: '0548332918',
-    parentEmail: 'rachel@gmail.com',
+    parentEmail: 'claudia@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Hadar Nataf`,
-    ID: '316460773',
-    parentName: 'Pnina',
-    parentPhone: '0546473827',
-    parentEmail: 'pnina@gmail.com',
+    id: 4,
+    name: 'Omer Perez',
+    ID: '318819201',
+    parentName: 'Lotem',
+    parentPhone: '0523637687',
+    parentEmail: 'locoloco@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Liad Bercovitch`,
-    ID: '382726123',
-    parentName: 'Ofer',
+    id: 5,
+    name: 'Idan Koper',
+    ID: '382724423',
+    parentName: 'Daniel',
     parentPhone: '0544718732',
-    parentEmail: 'ofer@gmail.com',
+    parentEmail: 'daniel@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Rotem Sela`,
+    id: 6,
+    name: 'Liron Lillian',
     ID: '317628911',
     parentName: 'Roy',
     parentPhone: '0541112827',
     parentEmail: 'roy@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Itamar Biton`,
-    ID: '311822972',
+    id: 7,
+    name: 'Shay Lasri',
+    ID: '311888822',
     parentName: 'Eli',
     parentPhone: '0527362722',
     parentEmail: 'eli@gmail.com',
   },
 ];
 
-// const allData = [1, 2, 3, 4, 5].reduce(
-//   (accum, index) => accum.concat(createDataSet(index)),
-//   [],
-// );
-
-const allData = createDataSet(1);
+const allData = createDataSet();
 
 export default translate()(RidersTable);

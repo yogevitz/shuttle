@@ -224,63 +224,58 @@ class SupervisorsTable extends React.Component {
   }
 }
 
-const createDataSet = setIndex => [
+const createDataSet = () => [
   {
-    id: `${setIndex}-1`,
-    name: `Yogev Shlomovitz`,
+    id: 1,
+    name: 'Yogev Shlomovitz',
     ID: '311530018',
     phone: '0527406333',
     email: 'tal@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Idan Shani`,
+    id: 2,
+    name: 'Idan Shani',
     ID: '305235517',
     phone: '0543876221',
     email: 'yosi@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Tomer Gabay`,
+    id: 3,
+    name: 'Tomer Gabay',
     ID: '316387262',
     phone: '0548332918',
     email: 'rachel@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Hadar Nataf`,
+    id: 4,
+    name: 'Hadar Nataf',
     ID: '316460773',
     phone: '0546473827',
     email: 'pnina@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Liad Bercovitch`,
+    id: 5,
+    name: 'Liad Bercovitch',
     ID: '382726123',
     phone: '0544718732',
     email: 'ofer@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Rotem Sela`,
+    id: 6,
+    name: 'Rotem Sela',
     ID: '317628911',
     phone: '0541112827',
     email: 'roy@gmail.com',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Itamar Biton`,
+    id: 7,
+    name: 'Itamar Biton',
     ID: '311822972',
     phone: '0527362722',
     email: 'eli@gmail.com',
   },
 ];
 
-// const allData = [1, 2, 3, 4, 5].reduce(
-//   (accum, index) => accum.concat(createDataSet(index)),
-//   [],
-// );
-
-const allData = createDataSet(1);
+const allData = createDataSet();
 
 export default translate()(SupervisorsTable);

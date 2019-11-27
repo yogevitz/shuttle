@@ -224,56 +224,51 @@ class ShuttlesTable extends React.Component {
   }
 }
 
-const createDataSet = setIndex => [
+const createDataSet = () => [
   {
-    id: `${setIndex}-1`,
-    name: `Beer Sheva Yellow Bus`,
+    id: 1,
+    name: 'Beer Sheva Yellow Bus',
     contactName: 'Yosi Cohen',
     contactPhone: '0528108333',
     destination: 'Beer Sheva',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Beit Kama Mini Bus`,
+    id: 2,
+    name: 'Beit Kama Mini Bus',
     contactName: 'Ben Levi',
     contactPhone: '0523712321',
     destination: 'Beit Kama',
   },
   {
-    id: `${setIndex}-1`,
-    name: `BK Large Bus`,
+    id: 3,
+    name: 'BK Large Bus',
     contactName: 'Goni Levin Haimi',
     contactPhone: '0548332918',
     destination: 'Beit Kama',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Rahat 10`,
+    id: 4,
+    name: 'Rahat 10',
     contactName: 'Hassan Abudugush',
     contactPhone: '0546478899',
     destination: 'Rahat',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Lehavim School Bus`,
+    id: 5,
+    name: 'Lehavim School Bus',
     contactName: 'Yaniv Gabot',
     contactPhone: '0544718732',
     destination: 'Lehavim',
   },
   {
-    id: `${setIndex}-1`,
-    name: `Mishmar 2`,
+    id: 6,
+    name: 'Mishmar 2',
     contactName: 'Dani Duenias',
     contactPhone: '0541112827',
     destination: 'Mishmar Hanegev',
   },
 ];
 
-// const allData = [1, 2, 3, 4, 5].reduce(
-//   (accum, index) => accum.concat(createDataSet(index)),
-//   [],
-// );
-
-const allData = createDataSet(1);
+const allData = createDataSet();
 
 export default translate()(ShuttlesTable);
