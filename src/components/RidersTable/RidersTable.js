@@ -315,6 +315,38 @@ const createDataSet = () => [
     parentPhone: '0527362722',
     parentEmail: 'eli@gmail.com',
   },
+  {
+    id: 8,
+    name: 'Rotem Sela',
+    ID: '205678687',
+    parentName: 'Lilach',
+    parentPhone: '0526474643',
+    parentEmail: 'lilach@gmail.com',
+  },
+  {
+    id: 9,
+    name: 'Dor Abargel',
+    ID: '311724423',
+    parentName: 'Itzik',
+    parentPhone: '0524009890',
+    parentEmail: 'itzik@gmail.com',
+  },
+  {
+    id: 10,
+    name: 'Don Omar',
+    ID: '208908121',
+    parentName: 'Fonsi',
+    parentPhone: '0544981618',
+    parentEmail: 'fonsi@gmail.com',
+  },
+  {
+    id: 11,
+    name: 'David Levi',
+    ID: '309823214',
+    parentName: 'Moshe',
+    parentPhone: '0542887675',
+    parentEmail: 'moshe@gmail.com',
+  },
 ];
 
 const allData = createDataSet();
