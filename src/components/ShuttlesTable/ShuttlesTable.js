@@ -236,44 +236,52 @@ const createDataSet = () => [
     name: 'Beer Sheva Yellow Bus',
     contactName: 'Yosi Cohen',
     contactPhone: '0528108333',
-    destination: 'Beer Sheva',
+    destination: DESTINATIONS.BEER_SHEVA,
   },
   {
     id: 2,
     name: 'Beit Kama Mini Bus',
     contactName: 'Ben Levi',
     contactPhone: '0523712321',
-    destination: 'Beit Kama',
+    destination: DESTINATIONS.BEIT_KAMA,
   },
   {
     id: 3,
     name: 'BK Large Bus',
     contactName: 'Goni Levin Haimi',
     contactPhone: '0548332918',
-    destination: 'Beit Kama',
+    destination: DESTINATIONS.BEIT_KAMA,
   },
   {
     id: 4,
     name: 'Rahat 10',
     contactName: 'Hassan Abudugush',
     contactPhone: '0546478899',
-    destination: 'Rahat',
+    destination: DESTINATIONS.RAHAT,
   },
   {
     id: 5,
     name: 'Lehavim School Bus',
     contactName: 'Yaniv Gabot',
     contactPhone: '0544718732',
-    destination: 'Lehavim',
+    destination: DESTINATIONS.LEHAVIM,
   },
   {
     id: 6,
     name: 'Mishmar 2',
     contactName: 'Dani Duenias',
     contactPhone: '0541112827',
-    destination: 'Mishmar Hanegev',
+    destination: DESTINATIONS.MISHMAR_HANEGEV,
   },
 ];
+
+const DESTINATIONS = {
+  BEER_SHEVA: 'Beer Sheva',
+  RAHAT: 'Rahat',
+  BEIT_KAMA: 'Beit Kama',
+  LEHAVIM: 'Lehavim',
+  MISHMAR_HANEGEV: 'Mishmar Hanegev',
+};
 
 const allData = createDataSet();
 
