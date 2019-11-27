@@ -39,7 +39,7 @@ export default hot(module, (app, context) => {
       language,
       basename,
       debug: debug || process.env.NODE_ENV === 'development',
-      title: 'Wix Full Stack Project Boilerplate',
+      title: 'Shuttle System',
       staticsDomain: config.clientTopology.staticsDomain,
     };
   }
