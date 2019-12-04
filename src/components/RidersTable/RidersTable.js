@@ -29,6 +29,7 @@ import {
   Duplicate,
   Add,
 } from 'wix-style-react/new-icons';
+import CreateRiderModal from './CreateRiderModal';
 
 class RidersTable extends React.Component {
   constructor(props) {
@@ -216,9 +217,7 @@ class RidersTable extends React.Component {
           <TableToolbar.ItemGroup position="end">
             <TableToolbar.Item>{this.renderSearch(false)}</TableToolbar.Item>
             <TableToolbar.Item layout="button">
-              <Button suffixIcon={<Add />} onClick={() => window.alert(1)}>
-                Add
-              </Button>
+              <CreateRiderModal />
             </TableToolbar.Item>
           </TableToolbar.ItemGroup>
         </TableToolbar>
