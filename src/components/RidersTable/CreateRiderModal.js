@@ -57,6 +57,10 @@ class CreateRiderModal extends Component {
                 <Input />
               </FormField>
               {this.divider()}
+              <FormField label={'ID'} required>
+                <Input />
+              </FormField>
+              {this.divider()}
               <FormField label={'Class'} required>
                 <Dropdown
                   placeholder="Select an option"
