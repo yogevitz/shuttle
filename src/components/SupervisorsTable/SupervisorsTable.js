@@ -7,6 +7,7 @@ import { Page, Card, Box, Table, Highlighter, TableActionCell, TableToolbar,
   PopoverMenuItem, Container, Row, Tabs, Col } from 'wix-style-react';
 import {Star, Download, Print, Duplicate, Add} from 'wix-style-react/new-icons';
 import Button from 'wix-style-react/Button';
+import CreateSupervisorModal from './CreateSupervisorModal';
 
 class SupervisorsTable extends React.Component {
   constructor(props) {
@@ -188,9 +189,7 @@ class SupervisorsTable extends React.Component {
           <TableToolbar.ItemGroup position="end">
             <TableToolbar.Item>{this.renderSearch(false)}</TableToolbar.Item>
             <TableToolbar.Item layout="button">
-              <Button suffixIcon={<Add />} onClick={() => window.alert(1)}>
-                Add
-              </Button>
+              <CreateSupervisorModal />
             </TableToolbar.Item>
           </TableToolbar.ItemGroup>
         </TableToolbar>
