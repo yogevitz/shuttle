@@ -87,7 +87,7 @@ class CreateRiderModal extends Component {
                 />
               </FormField>
               {this.divider()}
-              <FormField label={'Phone Number'} required>
+              <FormField label={'Phone Number'}>
                 <Input />
               </FormField>
               {this.divider()}
