@@ -27,6 +27,11 @@ class CreateShuttleModal extends Component {
     return destinations;
   }
 
+  createShuttle = () => {
+    this.setState({ isOpenFullScreenModal: false });
+    window.alert(`New shuttle added!`);
+  };
+
   divider() {
     return <div style={{ height: '15px' }} />;
   }
@@ -56,7 +61,7 @@ class CreateShuttleModal extends Component {
             dataHook="fullscreen-modal"
             fullscreen
             onCancel={closeFullScreenModal}
-            onOk={closeFullScreenModal}
+            onOk={this.createShuttle}
             theme="blue"
             title="Create Shuttle"
           >
