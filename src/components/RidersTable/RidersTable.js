@@ -173,46 +173,46 @@ class RidersTable extends React.Component {
     return (
       <Card>
         <TableToolbar>
-          <TableToolbar.ItemGroup position="start">
-            <TableToolbar.Item>
-              <TableToolbar.Label>
-                Product
-                <span style={{ width: '150px' }}>
-                  <Dropdown
-                    options={collectionOptions}
-                    selectedId={this.state.collectionId}
-                    onSelect={selectedOption => {
-                      this.setState({ collectionId: selectedOption.id });
-                    }}
-                    roundInput
-                  />
-                </span>
-              </TableToolbar.Label>
-            </TableToolbar.Item>
-            <TableToolbar.Item>
-              <TableToolbar.Label>
-                Color
-                <span style={{ width: '86px' }}>
-                  <Dropdown
-                    options={filterOptions}
-                    selectedId={this.state.filterId}
-                    onSelect={selectedOption =>
-                      this.setState({ filterId: selectedOption.id })
-                    }
-                    roundInput
-                  />
-                </span>
-              </TableToolbar.Label>
-            </TableToolbar.Item>
-            <TableToolbar.Item>
-              <Checkbox
-                checked={this.state.inStock}
-                onChange={e => this.setState({ inStock: e.target.checked })}
-              >
-                In Stock only
-              </Checkbox>
-            </TableToolbar.Item>
-          </TableToolbar.ItemGroup>
+          {/*<TableToolbar.ItemGroup position="start">*/}
+          {/*  <TableToolbar.Item>*/}
+          {/*    <TableToolbar.Label>*/}
+          {/*      Product*/}
+          {/*      <span style={{ width: '150px' }}>*/}
+          {/*        <Dropdown*/}
+          {/*          options={collectionOptions}*/}
+          {/*          selectedId={this.state.collectionId}*/}
+          {/*          onSelect={selectedOption => {*/}
+          {/*            this.setState({ collectionId: selectedOption.id });*/}
+          {/*          }}*/}
+          {/*          roundInput*/}
+          {/*        />*/}
+          {/*      </span>*/}
+          {/*    </TableToolbar.Label>*/}
+          {/*  </TableToolbar.Item>*/}
+          {/*  <TableToolbar.Item>*/}
+          {/*    <TableToolbar.Label>*/}
+          {/*      Color*/}
+          {/*      <span style={{ width: '86px' }}>*/}
+          {/*        <Dropdown*/}
+          {/*          options={filterOptions}*/}
+          {/*          selectedId={this.state.filterId}*/}
+          {/*          onSelect={selectedOption =>*/}
+          {/*            this.setState({ filterId: selectedOption.id })*/}
+          {/*          }*/}
+          {/*          roundInput*/}
+          {/*        />*/}
+          {/*      </span>*/}
+          {/*    </TableToolbar.Label>*/}
+          {/*  </TableToolbar.Item>*/}
+          {/*  <TableToolbar.Item>*/}
+          {/*    <Checkbox*/}
+          {/*      checked={this.state.inStock}*/}
+          {/*      onChange={e => this.setState({ inStock: e.target.checked })}*/}
+          {/*    >*/}
+          {/*      In Stock only*/}
+          {/*    </Checkbox>*/}
+          {/*  </TableToolbar.Item>*/}
+          {/*</TableToolbar.ItemGroup>*/}
           <TableToolbar.ItemGroup position="end">
             <TableToolbar.Item>{this.renderSearch(false)}</TableToolbar.Item>
             <TableToolbar.Item layout="button">
