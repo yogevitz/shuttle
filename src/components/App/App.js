@@ -13,7 +13,7 @@ import Settings from '../pages/Settings';
 
 const tabs = [
   { id: 1, title: 'War Room', component: <WarRoom /> },
-  { id: 2, title: 'Placements', component: <Placements /> },
+  // { id: 2, title: 'Placements', component: <Placements /> },
   { id: 3, title: 'Shuttles', component: <Shuttles /> },
   { id: 4, title: 'Supervisors', component: <Supervisors /> },
   { id: 5, title: 'Riders', component: <Riders /> },
