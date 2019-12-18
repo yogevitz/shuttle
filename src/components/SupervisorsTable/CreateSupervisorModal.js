@@ -15,7 +15,7 @@ class CreateSupervisorModal extends Component {
     };
   }
 
-  createRider = () => {
+  createSupervisor = () => {
     this.setState({ isOpenFullScreenModal: false });
     window.alert(`New supervisor added!`);
   };
@@ -48,7 +48,7 @@ class CreateSupervisorModal extends Component {
             dataHook="fullscreen-modal"
             fullscreen
             onCancel={closeFullScreenModal}
-            onOk={this.createRider}
+            onOk={this.createSupervisor}
             theme="blue"
             title="Create Supervisor"
           >
@@ -76,4 +76,4 @@ class CreateSupervisorModal extends Component {
   }
 }
 
-export default () => <CreateSupervisorModal />;
+export default CreateSupervisorModal;
