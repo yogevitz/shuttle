@@ -40,9 +40,10 @@ import CreateShuttleModal from './CreateShuttleModal';
 class ShuttlesTable extends React.Component {
   constructor(props) {
     super(props);
+    this.onCreateShuttle = this.onCreateShuttle.bind(this);
 
     this.state = {
-      data: allData,
+      data: shuttles,
       collectionId: 0,
       filterId: 0,
       searchTerm: '',
@@ -160,6 +161,14 @@ class ShuttlesTable extends React.Component {
     });
   }
 
+  onCreateShuttle = shuttle => {
+    const tmpData = this.state.data;
+    tmpData.push(shuttle);
+    this.setState({
+      data: tmpData,
+    });
+  };
+
   renderMainToolbar() {
     return (
       <Card>
@@ -167,7 +176,7 @@ class ShuttlesTable extends React.Component {
           <TableToolbar.ItemGroup position="start">
             <TableToolbar.Item>{this.renderSearch(false)}</TableToolbar.Item>
             <TableToolbar.Item layout="button">
-              <CreateShuttleModal />
+              <CreateShuttleModal onCreateShuttle={this.onCreateShuttle} />
             </TableToolbar.Item>
           </TableToolbar.ItemGroup>
         </TableToolbar>
@@ -207,7 +216,15 @@ class ShuttlesTable extends React.Component {
   }
 }
 
-const createDataSet = () => [
+export const DESTINATIONS = {
+  BEER_SHEVA: 'Beer Sheva',
+  RAHAT: 'Rahat',
+  BEIT_KAMA: 'Beit Kama',
+  LEHAVIM: 'Lehavim',
+  MISHMAR_HANEGEV: 'Mishmar Hanegev',
+};
+
+export const shuttles = [
   {
     id: 1,
     name: 'Beer Sheva Yellow Bus',
@@ -251,15 +268,5 @@ const createDataSet = () => [
     destination: DESTINATIONS.MISHMAR_HANEGEV,
   },
 ];
-
-export const DESTINATIONS = {
-  BEER_SHEVA: 'Beer Sheva',
-  RAHAT: 'Rahat',
-  BEIT_KAMA: 'Beit Kama',
-  LEHAVIM: 'Lehavim',
-  MISHMAR_HANEGEV: 'Mishmar Hanegev',
-};
-
-const allData = createDataSet();
 
 export default translate()(ShuttlesTable);

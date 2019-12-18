@@ -6,13 +6,24 @@ import Dropdown from 'wix-style-react/Dropdown';
 import Input from 'wix-style-react/Input';
 import Modal from 'wix-style-react/Modal';
 import { Add } from 'wix-style-react/new-icons';
-import { DESTINATIONS } from './ShuttlesTable';
+import { DESTINATIONS, shuttles } from './ShuttlesTable';
+import PropTypes from 'prop-types';
 
 class CreateShuttleModal extends Component {
+  static propTypes = {
+    onCreateShuttle: PropTypes.func,
+  };
+
   constructor(props) {
     super(props);
+    console.log(props);
     this.state = {
       isOpenFullScreenModal: false,
+      name: '',
+      destination: '',
+      numOfSeats: '',
+      contactName: '',
+      contactPhoneNumber: '',
     };
   }
 
@@ -21,6 +32,7 @@ class CreateShuttleModal extends Component {
     Object.keys(DESTINATIONS).forEach(function(key, index) {
       destinations.push({
         id: index,
+        key,
         value: DESTINATIONS[key],
       });
     });
@@ -28,6 +40,15 @@ class CreateShuttleModal extends Component {
   }
 
   createShuttle = () => {
+    // console.log(this.props);
+    this.props.onCreateShuttle({
+      id: shuttles.length + 1,
+      name: this.state.name,
+      contactName: this.state.contactName,
+      contactPhone: this.state.contactPhoneNumber,
+      destination: this.state.destination,
+      // numOfSeats: this.state.numOfSeats,
+    });
     this.setState({ isOpenFullScreenModal: false });
     window.alert(`New shuttle added!`);
   };
@@ -108,4 +129,4 @@ class CreateShuttleModal extends Component {
   };
 }
 
-export default () => <CreateShuttleModal />;
+export default CreateShuttleModal;
