@@ -70,23 +70,24 @@ class CreateShuttleModal extends Component {
                 <Dropdown
                   placeholder="Select an option"
                   options={destinations}
+                  onSelect={option => this.onDestinationSelect(option)}
                 />
               </FormField>
               {this.divider()}
               <FormField label={'Shuttle Name'} required>
-                <Input />
+                <Input onChange={this.onNameChange} />
               </FormField>
               {this.divider()}
               <FormField label={'Number of Seats'} required>
-                <Input />
+                <Input onChange={this.onNumOfSeatsChange} />
               </FormField>
               {this.divider()}
               <FormField label={'Contact Name'} required>
-                <Input />
+                <Input onChange={this.onContactNameChange} />
               </FormField>
               {this.divider()}
               <FormField label={'Contact Phone Number'} required>
-                <Input />
+                <Input onChange={this.onContactPhoneNumberChange} />
               </FormField>
             </div>
           </MessageBoxFunctionalLayout>
@@ -94,6 +95,17 @@ class CreateShuttleModal extends Component {
       </div>
     );
   }
+
+  onNameChange = ({ target: { value } }) => this.setState({ name: value });
+  onNumOfSeatsChange = ({ target: { value } }) =>
+    this.setState({ numOfSeats: value });
+  onContactNameChange = ({ target: { value } }) =>
+    this.setState({ contactName: value });
+  onContactPhoneNumberChange = ({ target: { value } }) =>
+    this.setState({ contactPhoneNumber: value });
+  onDestinationSelect = option => {
+    this.setState({ destination: DESTINATIONS[option.key] });
+  };
 }
 
 export default () => <CreateShuttleModal />;
